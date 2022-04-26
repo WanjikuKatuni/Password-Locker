@@ -14,7 +14,7 @@ def main():
     """ while loop to achieve application requisites """
 
     while True:
-        print("To create new username use 'new':'/n' To login to guest account use 'log': '/n' T0 exit the applicaiton use 'x'")
+        print("To create new username use 'new':'/n' To login to guest account use 'log': '/n' To exit the applicaiton use 'x'")
         short_code = input().lower() #ensure shortcodes are in lowercase
         print('/n')
 
@@ -78,6 +78,13 @@ def main():
             else:
                     print(f"Welcome {preset_user_name} to your guest password vault account")
                     print('/n')
+
+        elif short_code == 'x':
+            print(f"Leaving so soon? Goodbye")
+            break
+
+        else:
+            print("Oopsie!!! You used the wrong shortcode! Enter a valid showrtcode")
 
 
   
