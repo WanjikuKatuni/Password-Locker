@@ -9,6 +9,9 @@ def store_account_credentials(a_type,a_username,a_password):
 def save_credentials(credentials):
     credentials.save_credentials()
 
+def display_credentials():
+    return Credentials.display_credentials()
+
 def main():
 
     print("Welcome to PasswordLocker. What should we call you?")
@@ -90,10 +93,20 @@ def main():
 
                             save_credentials(store_account_credentials(a_type,a_username,a_password))
                             print('\n')
+                                                        
+                            print(f"Yippie!!! Credentials for {a_type} with {a_username} and password ****** created successfully")
 
-                            print(f"Stored credentials for {a_type} with {a_username} and password ****** created successfully")
+                       
+                        elif short_code =='dis':
+                            if display_credentials():
+                                print("Below are all your saved credentials")
+                                print('\n')
 
-                        # elif short_code =='dis':
+                                for credentials in display_credentials():
+                                    print(f"{credentials.account_type} {credentials.account_username} {credentials.account_password}")
+                                    print('\n')
+                            else:
+                                print("No credentials available")
                         # elif short_code =='d':
                         # elif short_code == 'ex':
 
