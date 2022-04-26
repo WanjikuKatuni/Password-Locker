@@ -18,6 +18,27 @@ def main():
         short_code = input().lower() #ensure shortcodes are in lowercase
         print('/n')
 
+        if short_code == 'new':
+            print('Create new username')
+            user_name = input()
+
+            print('Create new password')
+            password=input()
+
+            print('Confirm new password')
+            confirm_password=input()
+
+            while confirm_password != password:
+                print("Alert!!!Password does not match!!!")
+                print('/n')
+                print("Enter new password again")
+                password=input()
+                print('/n')
+                print("Confirm new password.hint:should be same as the password written above")
+                confirm_password=input()
+                print('/n')
+
+
         
 
 """ 
