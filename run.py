@@ -8,7 +8,7 @@ def main():
 
     name=input()
 
-    print(f"Hello {name}. To proceed selecect the shortcodes below")
+    print(f"Hello {name}. To proceed select the shortcodes below")
     print('/n')
 
     
