@@ -19,14 +19,14 @@ def main():
     name=input()
 
     print(f"Hello {name}. To proceed select the shortcodes below")
-    print('/n')
+    print('\n')
 
     """ while loop to achieve application requisites """
 
     while True:
-        print("To create new username use 'new':'/n' To login to guest account use 'log': '/n' To exit the applicaiton use 'x'")
+        print("To create new username use 'new':'\n' To login to guest account use 'log': '\n' To exit the applicaiton use 'x'")
         short_code = input().lower() #ensure shortcodes are in lowercase
-        print('/n')
+        print('\n')
 
         if short_code == 'new':
             print('Create new username')
@@ -40,17 +40,17 @@ def main():
 
             while confirm_password != new_password:
                 print("Alert!!!Password does not match!!!")
-                print('/n')
+                print('\n')
                 print("Enter new password again")
                 new_password=input()
-                print('/n')
+                print('\n')
                 print("Confirm new password.hint:should be same as the password written above")
                 confirm_password=input()
-                print('/n')
+                print('\n')
             
             else:
                 print(f"Congratulations!!! Account creation successful Welcome {new_user_name} to your password locker VAULT!!")
-                print('/n')
+                print('\n')
                 print("Enter Login details")
                 print("Username")
                 existing_user_name = input()
@@ -59,7 +59,7 @@ def main():
             
                 while existing_user_name != new_user_name or existing_password != new_password:
                     print("Oopsie!! Memory can be fleeting at times :) Invalid username or password")
-                    print('/n')
+                    print('\n')
                     print("Enter Login details again.This time, get it right")
                     print("Username")
                     existing_user_name = input()
@@ -74,7 +74,7 @@ def main():
                     """
 
                     while True: 
-                        print(f"{existing_user_name} use these shortcodes to navigate the application: 'sto' -store existing account credentials, 'cr' - create new account credentials, 'dis' - display existing credentials, 'd' -delete credentials, 'ex'-logout of credentials account ")
+                        print(f"{existing_user_name} use these shortcodes to navigate the application:'\n' 'sto' -store existing account credentials, '\n' 'dis' - display existing credentials, '\n' 'd' -delete credentials, '\n' 'cr'- create new credentials, '\n''ex'-logout of credentials account ")
                         print('\n')
                         short_code = input().lower()
 
@@ -145,7 +145,7 @@ def main():
 
             while preset_user_name != 'guestuser' or preset_password != '12345':
                     print("Oopsie!! For guest login use the username 'guestuser' and password '12345' ")
-                    print('/n')
+                    print('\n')
                     print("Enter Login details again.This time, get it right")
                     print("Username")
                     preset_user_name = input()
@@ -153,7 +153,7 @@ def main():
                     preset_password= input()
             else:
                     print(f"Welcome {preset_user_name} to your guest password vault account")
-                    print('/n')
+                    print('\n')
 
 
                     """
@@ -161,7 +161,8 @@ def main():
                     """
 
                     while True: 
-                        print(f"{preset_user_name} use these shortcodes to navigate the application: 'sto' -store existing account credentials, 'dis' - display existing credentials, 'd' -delete credentials, 'ex'-logout of credentials account ")
+                        print(f"{preset_user_name} use these shortcodes to navigate the application:'\n' 'sto' -store existing account credentials, '\n' 'dis' - display existing credentials, '\n' 'd' -delete credentials, '\n' 'cr'- create new credentials, '\n''ex'-logout of credentials account ")
+
                         print('\n')
                         short_code = input().lower()
 
