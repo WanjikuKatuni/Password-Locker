@@ -203,7 +203,7 @@ def main():
             break
 
         else:
-            print("Oopsie!!! You used the wrong shortcode! Enter a valid showrtcode")
+            print("Oopsie!!! You used the wrong shortcode! Enter a valid shortcode")
 
 
   
