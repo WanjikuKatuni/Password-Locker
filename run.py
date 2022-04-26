@@ -37,6 +37,15 @@ def main():
                 print("Confirm new password.hint:should be same as the password written above")
                 confirm_password=input()
                 print('/n')
+            
+            else:
+                print(f"Congratulations!!! Account creation successful Welcome {user_name} to your password locker VAULT!!")
+                print('/n')
+                print("Enter Login details")
+                print("Username")
+                user_name = input()
+                print("Password")
+                password=input()
 
 
         
