@@ -74,7 +74,7 @@ def main():
                     """
 
                     while True: 
-                        print(f"{existing_user_name} use these shortcodes to navigate the application: 'sto' -store existing account credentials, 'dis' - display existing credentials, 'd' -delete credentials, 'ex'-logout of credentials account ")
+                        print(f"{existing_user_name} use these shortcodes to navigate the application: 'sto' -store existing account credentials, 'cr' - create new account credentials, 'dis' - display existing credentials, 'd' -delete credentials, 'ex'-logout of credentials account ")
                         print('\n')
                         short_code = input().lower()
 
@@ -97,6 +97,24 @@ def main():
                             print(f"Yippie!!! Credentials for {a_type} with {a_username} and password ****** created successfully")
 
                        
+                        elif short_code =='cr':
+                            
+                            print("Enter account details for new account")
+                            print("-"*10)
+
+                        
+                                    
+
+                            print("Enter account name")
+                            a_type=input()
+
+                            print("Enter account username")
+                            a_username=input()
+
+                                
+
+
+
                         elif short_code =='dis':
                             if display_credentials():
                                 print("Below are all your saved credentials")
