@@ -1,3 +1,5 @@
+import random
+
 from user import User
 from credentials import Credentials
 
@@ -126,6 +128,69 @@ def main():
                             else:
                                 print("No credentials available")
                         # elif short_code =='d':
+
+                        elif short_code == 'cr':
+                            print(f"{preset_user_name} use these shortcodes to navigate the application:'\n' 'aut' -to autogenerate password, '\n' 'man' - to manually input password")
+
+                            print('\n')
+                            short_code = input().lower()
+
+                            while True: 
+
+                                if short_code == 'man':
+
+                                    print("Create new account details")
+                                    print("-"*10)
+
+                                    print("Enter account name")
+                                    a_type=input()
+
+                                    print("Enter account username")
+                                    a_username=input()
+
+                                    print("Enter account password")
+                                    a_password=input()
+
+                                    save_credentials(store_account_credentials(a_type,a_username,a_password))
+                                    print('\n')
+                                                        
+                                    print(f"Yippie!!! Credentials for {a_type} with {a_username} and password ****** created successfully")
+
+                                elif short_code == 'aut':
+                                    print("Create new account details")
+                                    print("-"*10)
+
+                                    print("Enter account name")
+                                    a_type=input()
+
+                                    print("Enter account username")
+                                    a_username=input()
+
+                                    """ to autogenerate password """
+
+                                    print("Lets autogenerate your password")
+
+                                    lower = "abcdefghijklmnopqrstuvwxyz"
+                                    upper = lower.upper()
+                                    numbers = "0123456789"
+                                    symbols= "@!#$%^&*-:_+,."
+
+                                    string=lower+upper+numbers+symbols
+                                    length = int(input("How many characters do you want your password to be: "))
+
+                                    a_password="".join(random.sample(string,length))
+
+                                    print("Your password is ", a_password)
+
+                                    
+                                    save_credentials(store_account_credentials(a_type,a_username,a_password))
+                                    print('\n')
+                                                        
+                                    print(f"Yippie!!! Credentials for {a_type} with {a_username} and password ****** created successfully")
+                                
+                                else:
+                                    print("oopsie! you have to select an option!")
+
                         # elif short_code == 'ex':
 
                         
@@ -197,23 +262,24 @@ def main():
                                 print("No credentials available")
                         # elif short_code =='d':
                         elif short_code == 'cr':
-                            print("Create new account details")
-                            print("-"*10)
+                            print(f"{preset_user_name} use these shortcodes to navigate the application:'\n' 'aut' -to autogenerate password, '\n' 'man' - to manually input password")
 
-                            print("Enter account name")
-                            a_type=input()
-
-                            print("Enter account username")
-                            a_username=input()
+                            print('\n')
+                            short_code = input().lower()
 
                             while True: 
-                                print(f"{preset_user_name} use these shortcodes to navigate the application:'\n' 'aut' -to autogenerate password, '\n' 'man' - to manually input password")
-
-                                print('\n')
-                                short_code = input().lower()
-
 
                                 if short_code == 'man':
+
+                                    print("Create new account details")
+                                    print("-"*10)
+
+                                    print("Enter account name")
+                                    a_type=input()
+
+                                    print("Enter account username")
+                                    a_username=input()
+
                                     print("Enter account password")
                                     a_password=input()
 
@@ -222,12 +288,43 @@ def main():
                                                         
                                     print(f"Yippie!!! Credentials for {a_type} with {a_username} and password ****** created successfully")
 
-                                elif short_code == 'auto':
-                                    print("Lets autogenerate your password")
-                                    
-                            
+                                elif short_code == 'aut':
+                                    print("Create new account details")
+                                    print("-"*10)
 
-                            
+                                    print("Enter account name")
+                                    a_type=input()
+
+                                    print("Enter account username")
+                                    a_username=input()
+
+                                    """ to autogenerate password """
+
+                                    print("Lets autogenerate your password")
+
+                                    lower = "abcdefghijklmnopqrstuvwxyz"
+                                    upper = lower.upper()
+                                    numbers = "0123456789"
+                                    symbols= "@!#$%^&*-:_+,."
+
+                                    string=lower+upper+numbers+symbols
+                                    length = int(input("How many characters do you want your password to be: "))
+
+                                    a_password="".join(random.sample(string,length))
+
+                                    print("Your password is ", a_password)
+
+                                    
+                                    save_credentials(store_account_credentials(a_type,a_username,a_password))
+                                    print('\n')
+                                                        
+                                    print(f"Yippie!!! Credentials for {a_type} with {a_username} and password ****** created successfully")
+                                
+                                else:
+                                    print("oopsie! you have to select an option!")
+                                    break
+
+                                           
 
                             
 
