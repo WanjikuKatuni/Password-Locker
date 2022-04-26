@@ -2,6 +2,13 @@ from user import User
 from credentials import Credentials
 
 
+def store_account_credentials(a_type,a_username,a_password):
+    new_credentials=Credentials(a_type,a_username,a_password)
+    return new_credentials
+
+def save_credentials(credentials):
+    credentials.save_credentials()
+
 def main():
 
     print("Welcome to PasswordLocker. What should we call you?")
@@ -59,14 +66,36 @@ def main():
                     print(f"Welcome {existing_user_name} to your password vault account")
                     print('\n')
                    
-                   """
-                   after login has accepted
-                   """
+                    """
+                    after login has accepted
+                    """
 
                     while True: 
                         print(f"{existing_user_name} use these shortcodes to navigate the application: 'sto' -store existing account credentials, 'dis' - display existing credentials, 'd' -delete credentials, 'ex'-logout of credentials account ")
                         print('\n')
-                        short_code = input().lower
+                        short_code = input().lower()
+
+                        if short_code =='sto':
+                            print("Enter account details for storage in the VAULT")
+                            print("-"*10)
+
+                            print("Enter account name")
+                            a_type=input()
+
+                            print("Enter account username")
+                            a_username=input()
+
+                            print("Enter account password")
+                            a_password=input()
+
+                            save_credentials(store_account_credentials(a_type,a_username,a_password))
+                            print('\n')
+
+                            print(f"Stored credentials for {a_type} with {a_username} and password ****** created successfully")
+
+                        # elif short_code =='dis':
+                        # elif short_code =='d':
+                        # elif short_code == 'ex':
 
                         
 
