@@ -11,7 +11,12 @@ def main():
     print(f"Hello {name}. To proceed select the shortcodes below")
     print('/n')
 
-    
+    """ while loop to achieve application requisites """
+
+    while True:
+        print("To create new username use 'new':'/n' To login to existing account use 'log': '/n' T0 exit the applicaiton use 'x'")
+        
+        print('/n')
 
         
 
