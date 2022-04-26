@@ -38,6 +38,9 @@ class TestCredentials(unittest.TestCase):
         """ to clear the test cases so as to avoid len errors"""
         Credentials.credentials_list=[]
 
+    def test_display_credentials(self):
+        """ check if display credentials saves and gives the result """
+        self.assertEqual(Credentials.display_credentials(), Credentials.credentials_list)
 
 if __name__== '__main__':
     unittest.main()
