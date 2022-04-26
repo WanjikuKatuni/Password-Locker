@@ -15,4 +15,12 @@ class Credentials:
     """
     def save_credentials(self):
         Credentials.credentials_list.append(self)
+    
+    
+    """
+    used to return list of credentials stored
+    """
+    @classmethod
+    def display_credentials(cls):
+        return cls.credentials_list 
 
