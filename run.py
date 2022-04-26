@@ -14,6 +14,10 @@ def save_credentials(credentials):
 def display_credentials():
     return Credentials.display_credentials()
 
+def del_credentials():
+    """ function to delete credentials"""
+    credentials.delete_credentials()
+
 def main():
 
     print("Welcome to PasswordLocker. What should we call you?")
@@ -185,21 +189,17 @@ def main():
                                     
                                     save_credentials(store_account_credentials(a_type,a_username,a_password))
                                     print('\n')
+                                    print("-"*10)
                                                         
-                                    print(f"Yippie!!! Credentials for {a_type} with {a_username} and password ****** created successfully")
+                                    print(f"Yippie!!! Credentials for {a_type} with {a_username} and password {a_password} created successfully")
                                 
                                 else:
                                     print("oopsie! you have to select an option!")
 
-                        # elif short_code == 'ex':
-
-                        
-
-                    
-
-
-
-            
+                        elif short_code == 'ex':
+                            print(f"Leaving so soon? Goodbye")
+                            break
+          
         elif short_code == 'log':
             print('Welcome to your guest Vault')
             print("Enter Login details")
@@ -260,7 +260,10 @@ def main():
                                     print('\n')
                             else:
                                 print("No credentials available")
-                        # elif short_code =='d':
+                        elif short_code =='d':
+                            """ delete credential object"""
+                            Credentials.credentials_list.remove(self)
+
                         elif short_code == 'cr':
                             print(f"{preset_user_name} use these shortcodes to navigate the application:'\n' 'aut' -to autogenerate password, '\n' 'man' - to manually input password")
 
@@ -318,18 +321,16 @@ def main():
                                     save_credentials(store_account_credentials(a_type,a_username,a_password))
                                     print('\n')
                                                         
-                                    print(f"Yippie!!! Credentials for {a_type} with {a_username} and password ****** created successfully")
+                                    print(f"Yippie!!! Credentials for {a_type} with {a_username} and password {a_password} created successfully")
                                 
                                 else:
                                     print("oopsie! you have to select an option!")
                                     break
 
-                                           
+                        elif short_code == 'ex':
+                            print(f"Leaving so soon? Goodbye")
+                            break
 
-                            
-
-
-                        # elif short_code == 'ex':
 
         elif short_code == 'x':
             print(f"Leaving so soon? Goodbye")
