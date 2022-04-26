@@ -57,7 +57,23 @@ def main():
                     existing_password=input()
                 else:
                     print(f"Welcome {existing_user_name} to your password vault account")
-                    print('/n')
+                    print('\n')
+                   
+                   """
+                   after login has accepted
+                   """
+
+                    while True: 
+                        print(f"{existing_user_name} use these shortcodes to navigate the application: 'sto' -store existing account credentials, 'dis' - display existing credentials, 'd' -delete credentials, 'ex'-logout of credentials account ")
+                        print('\n')
+                        short_code = input().lower
+
+                        
+
+                    
+
+
+
             
         elif short_code == 'log':
             print('Welcome to your guest Vault')
