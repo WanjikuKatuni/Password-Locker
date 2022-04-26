@@ -15,7 +15,7 @@ def main():
 
     while True:
         print("To create new username use 'new':'/n' To login to existing account use 'log': '/n' T0 exit the applicaiton use 'x'")
-        
+        short_code = input().lower() #ensure shortcodes are in lowercase
         print('/n')
 
         
