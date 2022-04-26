@@ -60,21 +60,21 @@ def main():
                     print('/n')
             
         elif short_code == 'log':
-            print('Welcome to your Vault')
+            print('Welcome to your guest Vault')
             print("Enter Login details")
             print("Username")
             preset_user_name = input()
             print("Password")
             preset_password = input()
 
-            while preset_user_name != 'guestuser' or existing_password != 12345:
+            while preset_user_name != 'guestuser' or preset_password != '12345':
                     print("Oopsie!! For guest login use the username 'guestuser' and password '12345' ")
                     print('/n')
                     print("Enter Login details again.This time, get it right")
                     print("Username")
                     preset_user_name = input()
                     print("Password")
-                    preset_password=input()
+                    preset_password= input()
             else:
                     print(f"Welcome {preset_user_name} to your guest password vault account")
                     print('/n')
