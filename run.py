@@ -196,6 +196,42 @@ def main():
                             else:
                                 print("No credentials available")
                         # elif short_code =='d':
+                        elif short_code == 'cr':
+                            print("Create new account details")
+                            print("-"*10)
+
+                            print("Enter account name")
+                            a_type=input()
+
+                            print("Enter account username")
+                            a_username=input()
+
+                            while True: 
+                                print(f"{preset_user_name} use these shortcodes to navigate the application:'\n' 'aut' -to autogenerate password, '\n' 'man' - to manually input password")
+
+                                print('\n')
+                                short_code = input().lower()
+
+
+                                if short_code == 'man':
+                                    print("Enter account password")
+                                    a_password=input()
+
+                                    save_credentials(store_account_credentials(a_type,a_username,a_password))
+                                    print('\n')
+                                                        
+                                    print(f"Yippie!!! Credentials for {a_type} with {a_username} and password ****** created successfully")
+
+                                elif short_code == 'auto':
+                                    print("Lets autogenerate your password")
+                                    
+                            
+
+                            
+
+                            
+
+
                         # elif short_code == 'ex':
 
         elif short_code == 'x':
