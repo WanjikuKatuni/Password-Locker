@@ -20,19 +20,19 @@ def main():
 
         if short_code == 'new':
             print('Create new username')
-            user_name = input()
+            new_user_name = input()
 
             print('Create new password')
-            password=input()
+            new_password=input()
 
             print('Confirm new password')
             confirm_password=input()
 
-            while confirm_password != password:
+            while confirm_password != new_password:
                 print("Alert!!!Password does not match!!!")
                 print('/n')
                 print("Enter new password again")
-                password=input()
+                new_password=input()
                 print('/n')
                 print("Confirm new password.hint:should be same as the password written above")
                 confirm_password=input()
@@ -43,10 +43,19 @@ def main():
                 print('/n')
                 print("Enter Login details")
                 print("Username")
-                user_name = input()
+                existing_user_name = input()
                 print("Password")
-                password=input()
-                
+                existing_password=input()
+            
+            while existing_user_name != new_user_name or existing_password != new_password:
+                print("Oopsie!! Memory can be fleeting at times :) Invalid username or password")
+                print('/n')
+                print("Enter Login details again.This time, get it right")
+                print("Username")
+                existing_user_name = input()
+                print("Password")
+                existing_password=input()
+            
 
 
         
